@@ -1,7 +1,7 @@
 - name: Install packages
   package:
     name:
-      - git
+      - 'git'
       - jq
       - curl
 
