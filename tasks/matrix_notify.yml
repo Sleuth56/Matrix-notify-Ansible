@@ -18,6 +18,7 @@
     group: root
     mode: u=rw,g=r,o=x
     backup: no
+    
 - name: Obtain matrix account info
   vars_prompt:
     - name: home_server
