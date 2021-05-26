@@ -1,0 +1,4 @@
+- name: Install packages
+  git:
+    repo: https://github.com/fabianonline/matrix.sh.git
+    dest: /bin/
