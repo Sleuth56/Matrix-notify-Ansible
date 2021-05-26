@@ -3,6 +3,8 @@
   become: true
 
   tasks:
-  - name: Install htop
-    pacman:
-      name: htop
+  - name: Install packages
+    packages:
+      name:
+        - htop
+        - yay
