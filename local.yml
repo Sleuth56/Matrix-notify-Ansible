@@ -7,14 +7,14 @@
   name: Obtain matrix account info.
   vars_prompt:
     - name: home_server
-      prompt: Enter the API key
+      prompt: 'Enter your home server URL inclusing https:// :'
 
     - name: default_room
-      prompt: What is your password?
+      prompt: 'Enter the room id !something:youtdomain.com :'
       
     - name: token
-      prompt: What is your password?
+      prompt: What is your account token? 
 
   tasks:
     - include: tasks/packages.yml
-    # - include: tasks/matrix_notify.yml
+    - include: tasks/matrix_notify.yml
