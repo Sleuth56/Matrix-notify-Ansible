@@ -1,0 +1,18 @@
+- name: Installing matrix.sh
+  git:
+    repo: https://github.com/fabianonline/matrix.sh.git
+    dest: /tmp/matrix.sh/
+
+- name: Moving matrix.sh into /usr/local/bin/
+  copy:
+    src: /tmp/matrix.sh/matrix.sh
+    dest: /usr/local/bin/matrix.sh
+    owner: root
+    group: root
+    mode: u=rwx,g=rx,o=xr
+    backup: no
+
+  lineinfile:
+    path: /etc/profile.d/00-aliases.sh
+    line: alias matrixLog='bash /usr/local/bin/matrix.sh --homeserver={{ home_server }} --token={{ token }} --room=\{{ default_room }} -'
+    create: yes

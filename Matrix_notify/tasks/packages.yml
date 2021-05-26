@@ -1,0 +1,6 @@
+- name: Install packages
+  package:
+    name:
+      - git
+      - jq
+      - curl
