@@ -5,27 +5,27 @@
       - jq
       - curl
 
-- git:
-    # name: Installing matrix.sh
+- name: Installing matrix.sh
+  git:
     repo: https://github.com/fabianonline/matrix.sh.git
     dest: /tmp/matrix.sh/
 
-  # copy:
-  #   name: Moving matrix.sh into /usr/local/bin/
-  #   src: /tmp/matrix.sh/matrix.sh
-  #   dest: /usr/local/bin/matrix.sh
-  #   owner: root
-  #   group: root
-  #   mode: u=rw,g=r,o=x
-  #   backup: no
+- name: Moving matrix.sh into /usr/local/bin/
+  copy:
+    src: /tmp/matrix.sh/matrix.sh
+    dest: /usr/local/bin/matrix.sh
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=x
+    backup: no
 
-  # vars_prompt:
-  #   - name: home_server
-  #     prompt: Enter the API key
-  #   - name: default_room
-  #     prompt: What is your password?
-  #   - name: token
-  #     prompt: What is your password?
+- vars_prompt:
+    - name: home_server
+      prompt: Enter the API key
+    - name: default_room
+      prompt: What is your password?
+    - name: token
+      prompt: What is your password?
 
   # lineinfile:
   #   path: /etc/profile.d/00-aliases.sh
