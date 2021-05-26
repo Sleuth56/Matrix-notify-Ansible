@@ -9,5 +9,5 @@
   #   changed_when: False
 
   tasks:
-    - include: tasks/matrix_notify.yml
-    # - include: tasks/packages.yml
+    - include: tasks/packages.yml
+    # - include: tasks/matrix_notify.yml
