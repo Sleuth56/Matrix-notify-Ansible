@@ -20,9 +20,9 @@
     backup: no
 
 - name: Test
-  vars_prompt:
-    - name: home_server
-      prompt: Enter the API key
+  # vars_prompt:
+  #   - name: home_server
+  #     prompt: Enter the API key
 
     # - name: default_room
     #   prompt: What is your password?
