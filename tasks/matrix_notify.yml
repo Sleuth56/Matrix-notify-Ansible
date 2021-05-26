@@ -5,8 +5,8 @@
       - jq
       - curl
 
-  git:
-    # name: Installing matrix.sh
+- git:
+    name: Installing matrix.sh
     repo: https://github.com/fabianonline/matrix.sh.git
     dest: /tmp/matrix.sh/
 
