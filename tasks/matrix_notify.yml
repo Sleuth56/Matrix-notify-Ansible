@@ -18,15 +18,15 @@
     group: root
     mode: u=rw,g=r,o=x
     backup: no
-    
-- name: Obtain matrix account info
-  vars_prompt:
-    - name: home_server
-      prompt: Enter the API key
-    - name: default_room
-      prompt: What is your password?
-    - name: token
-      prompt: What is your password?
+
+# - name: Obtain matrix account info
+#   vars_prompt:
+#     - name: home_server
+#       prompt: Enter the API key
+#     - name: default_room
+#       prompt: What is your password?
+#     - name: token
+#       prompt: What is your password?
 
   # lineinfile:
   #   path: /etc/profile.d/00-aliases.sh
