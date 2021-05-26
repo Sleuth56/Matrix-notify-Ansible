@@ -12,6 +12,7 @@
     mode: u=rwx,g=rx,o=xr
     backup: no
 
+- name: Creat bash alias
   lineinfile:
     path: /etc/profile.d/00-aliases.sh
     line: alias matrixLog='bash /usr/local/bin/matrix.sh --homeserver={{ home_server }} --token={{ token }} --room=\{{ default_room }} -'
