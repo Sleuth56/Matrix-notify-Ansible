@@ -3,12 +3,17 @@
   connection: local
   become: true
 
-  # pre_tasks:
-  #   - name: update repositories
-  #   apt:
-  #     update_cache: yes
-  #   changed_when: False
+- name: Obtain matrix account info.
+  vars_prompt:
+    - name: home_server
+      prompt: Enter the API key
+
+    - name: default_room
+      prompt: What is your password?
+      
+    - name: token
+      prompt: What is your password?
 
   tasks:
+    - include: tasks/packages.yml
     - include: tasks/matrix_notify.yml
-    # - include: tasks/packages.yml

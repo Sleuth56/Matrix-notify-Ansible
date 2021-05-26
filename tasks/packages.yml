@@ -1,5 +1,6 @@
 - name: Install packages
   package:
     name:
-      - htop
-      - yay
+      - git
+      - jq
+      - curl
