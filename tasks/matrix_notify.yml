@@ -15,5 +15,5 @@
 - name: Create bash alias
   lineinfile:
     path: /etc/bash.bashrc
-    line: alias matrixLog='bash /usr/local/bin/matrix --homeserver={{ home_server }} --token={{ token }} --room=\{{ default_room }} -'
+    line: alias matrixLog='bash /usr/local/bin/sendToMatrix --homeserver={{ home_server }} --token={{ token }} --room=\{{ default_room }} -'
     create: yes
