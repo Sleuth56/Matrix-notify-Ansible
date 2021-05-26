@@ -16,17 +16,18 @@
     dest: /usr/local/bin/matrix.sh
     owner: root
     group: root
-    mode: u=rw,g=r,o=x
+    mode: u=rwx,g=rx,o=xr
     backup: no
 
-# - name: Obtain matrix account info
-#   vars_prompt:
-#     - name: home_server
-#       prompt: Enter the API key
-#     - name: default_room
-#       prompt: What is your password?
-#     - name: token
-#       prompt: What is your password?
+  vars_prompt:
+    - name: home_server
+      prompt: Enter the API key
+
+    - name: default_room
+      prompt: What is your password?
+      
+    - name: token
+      prompt: What is your password?
 
   # lineinfile:
   #   path: /etc/profile.d/00-aliases.sh
