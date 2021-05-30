@@ -12,6 +12,11 @@
     mode: u=rwx,g=rx,o=xr
     backup: no
 
+- name: Adding /opt/logToMatrix to system-wide $PATH.
+  copy:
+    dest: /etc/profile.d/custom-path.sh
+    content: PATH=$PATH:/opt/logToMatrix
+
 - name: Create bash alias
   lineinfile:
     path: /etc/bash.bashrc
