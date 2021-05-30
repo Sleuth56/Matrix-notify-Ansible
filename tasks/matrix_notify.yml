@@ -6,7 +6,7 @@
 - name: Moving matrix.sh into /usr/local/bin/
   copy:
     src: /tmp/matrix.sh/matrix.sh
-    dest: /usr/local/bin/sendToMatrix
+    dest: /opt/logToMatrix
     owner: root
     group: root
     mode: u=rwx,g=rx,o=xr
@@ -15,5 +15,5 @@
 - name: Create bash alias
   lineinfile:
     path: /etc/bash.bashrc
-    line: alias matrixLog='bash /usr/local/bin/sendToMatrix --homeserver={{ home_server }} --token={{ token }} --room=\{{ default_room }} -'
+    line: alias matrixLog='bash /opt/logToMatrix --homeserver={{ home_server }} --token={{ token }} --room=\{{ default_room }} -'
     create: yes
