@@ -5,3 +5,4 @@
       #!/bin/sh
       ip="$(echo "$SSH_CONNECTION" | cut -d " " -f 1)"
       echo $USER@$(hostname) logged in from $ip at $(date +%H:%M:%S) | bash /opt/logToMatrix --homeserver={{ home_server }} --token={{ token }} --room=\{{ default_room }} -
+    create: yes
